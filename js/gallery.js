@@ -4,13 +4,9 @@ var buttonDes = document.getElementById('design');
 var projectsGridReact = document.getElementById('projects__grid-react');
 var projectsGridDesign = document.getElementById('projects__grid-design');
 var projectsGridResp = document.getElementById('projects__grid-responsive');
-let viewp = document.documentElement.clientWidth;
-
-projectsGridResp.style.display = 'none';
 
 
 function showReact () {
-    let viewp = document.documentElement.clientWidth;
     projectsGridDesign.style.display = 'none';
     projectsGridResp.style.display = 'none';
     projectsGridReact.style.display = 'grid';
@@ -32,7 +28,6 @@ function showReact () {
 
 
 function showDesign () {
-   let viewp = document.documentElement.clientWidth;
 
     projectsGridDesign.style.display= 'grid';
     projectsGridResp.style.display = 'none';
@@ -56,20 +51,11 @@ function showDesign () {
 
 
 function showResp () {
-    let viewp = document.documentElement.clientWidth;
-        if (viewp < 835) {
-            projectsGridDesign.style.display= 'none';
-            projectsGridReact.style.display = 'none';   
-
-            projectsGridResp.style.display = 'flex';
-            projectsGridResp.style.flexDirection = 'column';
-            projectsGridResp.style.marginBottom = '2rem';
-        } else {
-            projectsGridDesign.style.display = 'none';
-            projectsGridResp.style.display = 'grid';
-            projectsGridReact.style.display = 'none';
-        }
     
+    projectsGridDesign.style.display = 'none';
+    projectsGridReact.style.display = 'none';
+
+    projectsGridResp.style.display = 'grid'; 
     
     buttonDes.style.backgroundColor = "transparent";
     buttonDes.style.color = "var(--prin-color)";
@@ -85,8 +71,6 @@ function showResp () {
 
 
 }
-
-
 
 buttonReact.addEventListener('click', showReact);
 buttonDes.addEventListener('click', showDesign);
