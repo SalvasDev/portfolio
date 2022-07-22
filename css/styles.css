@@ -426,8 +426,9 @@ flex-direction: column;
     display: none;
     width: min(95%, 1046px);
     margin: 0 auto;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     column-gap: 2rem;
+    row-gap: 2rem;
     background-color: transparent;
     max-height: 100%;
 }
@@ -596,12 +597,6 @@ flex-direction: column;
     margin-top: 3rem;
 }
 
- .projects__grid-responsive {
-     display: flex;
-     flex-direction: column;
-     row-gap: 2rem;
- }
-
 
 }
 
@@ -624,12 +619,7 @@ flex-direction: column;
         flex-direction: column;
     }   
     
-    .projects__grid-responsive {
-        display: flex;
-        flex-direction: column;
-        row-gap: 2rem;
-    }
-
+  
 }
 
 @media (max-width: 465px) {
